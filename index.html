@@ -14,7 +14,7 @@
             <hr>
             <h2>Fill out form below to generator your meme(s) of choice!</h2>
         </div>
-        <form action="#" method="post">
+        <form id = "form" action="#" method="post">
             <input type="url" name="imglink" id="imglink"  placeholder="Insert image URL here" /><br>
             <input type="topText" id="toptext" placeholder="Insert top text here"><br>
             <input type="bottomText" id="bottomtext" placeholder="Insert bottom text here"><br>
@@ -25,6 +25,7 @@
         </div>
         <script>
             document.getElementById('submit').addEventListener('click', function(){
+
                 let memesList = document.getElementById("list");
 
                 let newMeme = document.createElement("div");
@@ -53,6 +54,8 @@
                 newMeme.appendChild(deleteButton);
 
                 memesList.appendChild(newMeme);
+
+                document.getElementById("form").reset();
             }); 
         </script>
     </header>
