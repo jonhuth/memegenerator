@@ -8,56 +8,22 @@
     
 </head>
 <body>
-    <header>
-        <div class="head">
-            <h1>Meme Generator</h1>
-            <hr>
-            <h2>Fill out form below to generator your meme(s) of choice!</h2>
-        </div>
-        <form id = "form" action="#" method="post">
-            <input type="url" name="imglink" id="imglink"  placeholder="Insert image URL here" /><br>
-            <input type="topText" id="toptext" placeholder="Insert top text here"><br>
-            <input type="bottomText" id="bottomtext" placeholder="Insert bottom text here"><br>
-            <input type="button" value="submit" id="submit" />
-        </form>
-        <div id="list">
-
-        </div>
-        <script>
-            document.getElementById('submit').addEventListener('click', function(){
-
-                let memesList = document.getElementById("list");
-
-                let newMeme = document.createElement("div");
-                newMeme.classList.add('meme');
-
-                let image = document.createElement("img");
-                image.src = document.getElementById('imglink').value;
-                newMeme.appendChild(image);
-
-                let top = document.createElement("div");
-                top.classList.add('top');
-                top.innerHTML = document.getElementById("toptext").value;
-                newMeme.appendChild(top);
-
-                let bottom = document.createElement("div");
-                bottom.classList.add('bottom');
-                bottom.innerHTML = document.getElementById("bottomtext").value;
-                newMeme.appendChild(bottom);
-
-                let deleteButton = document.createElement("button");
-                deleteButton.type = "button";
-                deleteButton.innerText = "delete meme";
-                deleteButton.addEventListener('click', function(){
-                    newMeme.remove();
-                })
-                newMeme.appendChild(deleteButton);
-
-                memesList.appendChild(newMeme);
-
-                document.getElementById("form").reset();
-            }); 
-        </script>
-    </header>
+    <div id="head">
+        <h1>Meme Generator</h1><hr>
+        <h2>Fill out form below to generator your meme(s) of choice!</h2>
+    </div>
+    <form id = "form" action="#" method="post">
+        <input type="url" name="imglink" id="imglink"  placeholder="Insert image URL here"><br>
+        <input type="topText" id="toptext" placeholder="Insert top text here"><br>
+        <input type="bottomText" id="bottomtext" placeholder="Insert bottom text here"><br>
+        <input type="button" value="submit" id="submit">
+    </form>
+    <div id="list">
+        <!-- meme -->
+            <!-- img -->
+            <!-- top text -->
+            <!-- bottom text -->
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
